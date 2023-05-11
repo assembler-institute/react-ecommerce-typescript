@@ -4,7 +4,7 @@ import "./App.scss";
 
 import ProductCard from "./components/ProductCard";
 
-// Render the products dinamically with a loop
+// Render the products dynamically with a loop
 import products from "./products";
 import Cart from "./components/Cart";
 import {CartItem} from "./interfaces/products.interface";
