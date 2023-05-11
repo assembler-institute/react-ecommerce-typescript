@@ -29,7 +29,7 @@ The app will be run by default in the following url: `http://localhost:3000/`
 First, you will need to clone the repo:
 
 ```bash
-$ git clone https://github.com/assembler-school/react-basics-hooks-shopping-cart.git
+$ git clone https://github.com/assembler-institute/react-ecommerce-typescript.git
 ```
 
 ## Instructions
