@@ -9,9 +9,10 @@ A demo app to learn the basics of React and to create a shopping cart using hook
 - [Getting Started](#getting-started)
 - [Instructions](#instructions)
 - [Extra steps 💯](#extra-steps-)
-- [Requirements](#requirements)
+- [Technical Requirements](#technical-requirements)
+- [Extra Technical Requerimients](#extra-technical-requirements)
 - [Available Scripts](#available-scripts)
-- [Author](#author)
+- [Support Resources](#support-resources)
 - [License](#license)
 
 ## Getting Started
@@ -88,10 +89,36 @@ Once you have finished the initial part of the pill you should implement the fol
 <img src='https://github.com/assembler-institute/react-basics-hooks-shopping-cart/raw/main/src/img/repo/react-basics-classes-add-to-cart.png' width='600'>
 
 - You should check if the cart item has already been added to the cart to only update the quantity instead of adding it again. You should stablish a quantity limit for each product that could depend upon the stock you stablish on your `products.ts` data.
-- Store the items in local storage and load them if the page is reloaded so that the cart items are not lost of page refresh
+- Store the items in local storage and load them if the page is reloaded so that the cart items are not lost on page refresh
 - Each time the page is refreshed you should load the cart items from local storage to save them in the React state so that the app renders with the contents from local storage if there are any of them. Otherwise, the cart should display the default message of “Your cart is empty”
 
-## Requirements
+## Technical Requirements
+
+### Next we leave you a series of technical requirements that will be evaluated:
+
+ -  **useState**: Utilize the `useState` hook to manage component state and store data such as the shopping cart, user information, etc.
+    
+-  **useEffect**: Employ the `useEffect` hook to perform asynchronous operations, such as fetching data from an API, managing side effects, and updating the application state.
+    
+-  **useContext**: Use the `useContext` hook to access globally shared data between components without the need to manually pass properties. This can include user information, global configuration, etc.
+    
+-  **Routes**: Implement routing using library like `react-router-dom` . Define the necessary routes for different sections of the application, such as the home page, product page, shopping cart, etc.
+    
+-  **.map**: Use the `map` method to iterate over data lists, such as the product list, and dynamically render elements.
+    
+- **Architecture (folder structure)**: Organize your project following a coherent and scalable folder structure. For example:
+    -   `/src`
+        -   `/components`: Contains reusable components used in various parts of the application.
+        -   `/pages`: Contains page-specific components for each page of the application.
+        -   `/services`: Contains modules for interacting with external APIs or other services.
+        -   `/utils`: Contains utilities and helper functions.
+        -   `/styles`: Contains global style files or custom themes.
+        
+-  **Reusable components**: Create reusable components that can be used in different parts of the application. This promotes consistency and facilitates project maintenance and scalability.
+    
+-  **Static typing and use of interfaces and custom types**: Take advantage of TypeScript to add static typing to your application. Define interfaces and custom types to improve code readability, prevent errors, and enhance maintainability.
+
+### Summary
 
 - You should extract and modularize all the UI elements to React components
 - The products must be rendered dynamically using JavaScript loops
@@ -101,6 +128,16 @@ Once you have finished the initial part of the pill you should implement the fol
 - Use interfaces or custom types to define the data structures and properties of the components.
 - Use `functional components` and `setState` methods to update the state of the application
 - Take advantage of TypeScript to detect errors and improve code quality during development.
+
+
+## [EXTRA] Technical Requirements
+
+-  **useReducer**: Utilize the `useReducer` hook to manage more complex states where actions and updates need to be performed. This can be useful for managing the shopping cart, authentication state, etc.
+- **`.env` File**: Create a `.env` file to securely store sensitive information such as API keys, payment gateway configurations, and other environment-specific settings. This ensures that confidential data is not exposed in the source code.
+- **Protected Routes**: Implement protected routes to restrict access to certain pages or features that require authentication. For example, only allow authenticated users to access the user profile or the checkout process. Redirect unauthorized users to a login page.
+- **Authentication**: Incorporate an authentication system to enable user registration, login, and session management. Use technologies like Firebase Authentication. This will allow users to access their account information and make secure purchases.
+
+
 
 ## Available Scripts
 
@@ -114,7 +151,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-## Learn More <!-- omit in toc -->
+## Support Resources
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
