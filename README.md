@@ -77,6 +77,7 @@ Once a product has been added to the cart you should be able to:
 - Remove items from the cart which will update the cart’s total price
 - The cart total price should always be updated so that it represents the total cost of all the items in the cart
 - When the cart is empty you should conditionally render a message inside the cart saying that the cart is empty. Then, when the cart has had items added, you should instead render the cart items and remove the default message.
+- Further elements to be added to the project will be given to you as we move on.
 
 ### State management
 
