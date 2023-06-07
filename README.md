@@ -96,13 +96,17 @@ Once you have finished the initial part of the pill you should implement the fol
 
 ### Next we leave you a series of technical requirements that will be evaluated:
 
- -  **useState**: Utilize the `useState` hook to manage component state and store data such as the shopping cart, user information, etc.
+- **Figma**: Or a similar platform, where you plan ahead of starting to code the look and feel of your application. As a frontender it is important that you visualize what you need ahead of time. It will ease the next steps when building your web application.
+
+-  **useState**: Utilize the `useState` hook to manage component state and store data such as the shopping cart, user information, etc.
     
 -  **useEffect**: Employ the `useEffect` hook to perform asynchronous operations, such as fetching data from an API, managing side effects, and updating the application state.
     
 -  **useContext**: Use the `useContext` hook to access globally shared data between components without the need to manually pass properties. This can include user information, global configuration, etc.
     
 -  **Routes**: Implement routing using library like `react-router-dom` . Define the necessary routes for different sections of the application, such as the home page, product page, shopping cart, etc.
+
+-  **Protected Routes**: Implement protected routes to restrict access to certain pages or features that require authentication. For example, only allow authenticated users to access the user profile or the checkout process. Redirect unauthorized users to a login page.
     
 -  **.map**: Use the `map` method to iterate over data lists, such as the product list, and dynamically render elements.
     
@@ -132,12 +136,16 @@ Once you have finished the initial part of the pill you should implement the fol
 
 ## [EXTRA] Technical Requirements
 
+- **Responsiveness**: Check whether the website is responsive and works well across different devices and screen sizes.
 -  **useReducer**: Utilize the `useReducer` hook to manage more complex states where actions and updates need to be performed. This can be useful for managing the shopping cart, authentication state, etc.
 - **`.env` File**: Create a `.env` file to securely store sensitive information such as API keys, payment gateway configurations, and other environment-specific settings. This ensures that confidential data is not exposed in the source code.
-- **Protected Routes**: Implement protected routes to restrict access to certain pages or features that require authentication. For example, only allow authenticated users to access the user profile or the checkout process. Redirect unauthorized users to a login page.
-- **Authentication**: Incorporate an authentication system to enable user registration, login, and session management. Use technologies like Firebase Authentication. This will allow users to access their account information and make secure purchases.
-
-
+- **Lazy Loading**: React Lazy and Suspense are built-in React features that allow you to lazily load components, improving the initial page load performance. By splitting your code into smaller chunks and loading them on-demand, you can provide faster load times for users and potentially improve SEO rankings.
+- **React Helmet**: Allows you to dynamically update the document head of your React components. It helps you add important metadata such as title tags, meta descriptions, and canonical URLs to improve SEO and provide better control over how your pages appear in search engine results.
+- **User Experience (UX)**: Evaluate the overall user experience by considering the website's layout, navigation, and design. Ensure that the interface is intuitive, user-friendly, and visually appealing. Focus on elements such as clear calls-to-action, easy-to-find product information, and smooth transitions between elements.
+- **Performance**: Assess the performance of the website, paying attention to factors such as page load times, server response times, and overall responsiveness. Slow-loading pages can negatively impact user experience and lead to higher bounce rates.
+- **Accessibility**: Ensure that the website meets accessibility standards to cater to users with disabilities. Pay attention to factors like proper semantic markup, keyboard navigation support, alternative text for images, and sufficient color contrast.
+- **Error Handling**: Assess how well errors and exceptions are handled throughout the website. Verify that appropriate error messages are displayed when something goes wrong, and ensure that the website gracefully handles unexpected scenarios.
+- **Documentation**: Review the documentation provided to start the project, including code comments, API documentation (if applicable), and any technical or design specifications. Well-documented projects are easier to understand and maintain in the long run.
 
 ## Available Scripts
 
