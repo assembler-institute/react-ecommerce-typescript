@@ -1,65 +1,312 @@
-`#react-basics` `#assembler-institute-of-technology` `#master-in-software-engineering`
+`#react` `#assembler-institute-of-technology` `#master-in-software-engineering` `#ReactEcommerce` `#ReactJS` `#ReactHooks` `#TailwindCSS` `#ReactHookForm` `#CustomHooks` `#StyledComponents` `#TypeScript` `#CSSModules` `#Figma` `#memo` `#UseMemo` `#Memoization` `#UseCallback` `#LazyLoading` `#Suspense` `#SkeletonScreens` `#LoadingPerformance` `#ReactOptimization`
 
-# React E-commerce <!-- omit in toc -->
+<img src="https://i.ibb.co/p2DbrWk/AIT-2-0-Favicon-Principal.png" alt="AIT Logo" height="40px"/>
 
-A demo app to learn the basics of React and to create a shopping cart using hooks.
+# ByteMarket by AIT  
+
+### Welcome to ByteMarket by AIT
+ByteMarket by AIT is an exceptional e-commerce platform where you can explore a diverse range of products and make purchases with ease. Browse through an extensive collection of cutting-edge products and indulge in a seamless shopping experience.
+
+### An Exciting Opportunity
+This project is an exciting opportunity for you to sharpen your frontend skills while building a feature-rich e-commerce platform. Dive into ByteMarket by AIT and gain hands-on experience implementing new functionalities, enhancing user experience, and optimizing performance, all under the guidance of Assembler Institute of Technology (AIT) expertise.
+
+Bear in mind, that **The UI/UX will be highly valued, and the project will be sanctioned if the recording is longer than the given time or delivered out of time, even if it's just for a second.**
+
+Let's create a seamless shopping experience together! Happy coding!
+
+![ByteMarket AIT](https://i.ibb.co/RBCNBRK/bytemarket.png)
 
 ## Table of Contents <!-- omit in toc -->
 
-- [Getting Started](#getting-started)
-- [Instructions](#instructions)
-- [Extra steps 💯](#extra-steps-)
-- [Technical Requirements](#technical-requirements)
-- [Extra Technical Requerimients](#extra-technical-requirements)
-- [Available Scripts](#available-scripts)
-- [Support Resources](#support-resources)
-- [License](#license)
+- [🔧 Instructions](#-instructions)
+- [🗃️ Data Model](#️-data-model)
+    - [📦 Products](#-products)
+    - [👤 Users](#-users)
+- [🚀 Phase 0: Figma and Clickup](#-phase-0-figma-and-clickup)
+- [⚙ Phase 1: Prop-drilling, useState, useEffect, Conditionals, and Error Handling](#-phase-1-prop-drilling-usestate-useeffect-conditionals-and-error-handling)
+- [📚 Phase 2: React Router, useContext, useReducer, Inputs, and Forms](#-phase-2-react-router-usecontext-usereducer-inputs-and-forms)
+- [🔄 Phase 3: Async/Await, React Router with dynamic and private Routes, and searchParams](#-phase-3-asyncawait-react-router-with-dynamic-and-private-routes-and-searchparams)
+- [🎨 Phase 4: CSS Modules and Styled Components](#-phase-4-css-modules-and-styled-components)
+- [🧠 Extra Phase 5: Memoization Techniques](#-extra-phase-5-memoization-techniques)
+- [🛌 Extra Phase 6: Custom Hooks, Lazy Loading, and startTransition](#-extra-phase-6-custom-hooks-lazy-loading-and-starttransition)
+- [🛍️ Extra Phase 7: Add-ons](#️-extra-phase-7-add-ons)
+- [👩‍🎓👨‍🎓 Evaluation](#-evaluation)
+- [📝 Learn More](#-learn-more)
+- [👾 Installation Tips](#-installation-tips)
+- [📃 License](#-license)
 
-## Getting Started
+# Project Name
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🔧 Instructions
 
-Run `npm i` or `yarn` in the terminal to install the dependencies.
+Throughout this project, you will create the dashboard of your e-commerce platform. We will start with the contents covered during the classes and gradually escalate as we deepen our knowledge.
 
-Then, run `npm run start` or `yarn start` to start up the app.
+The main branch of the repository will have the favorite class solution of the previous project so that you can refer to it if you get stuck at any stage.
 
-The app will be run by default in the following url: `http://localhost:3000/`
+### 🗃️ Data Model
 
-### The repo
+In this project, we will mainly work with a product list that is stored in a file named as `products.ts`, or as you wish, which you should use to render the products to the screen dynamically using a JavaScript loop `map`. We will have a single file with two main entities: `Products`and `Users`.
 
-First, you will need to clone the repo:
+### 📦 Products
+
+- The "products" array contains information about different products available in the e-commerce platform.
+- Each product has an "id," "name," "price," "stock," "image" URLs, "description," "category," "brand," "rating," and an array of "reviews" (with review "id," "userId," "rating," "comment," and "date").
+- The "filters" array provides additional categorization for the products.
 
 ```bash
-$ git clone https://github.com/assembler-institute/react-ecommerce-typescript.git
+{
+  "products": [
+    {
+      "id": "64c9faed738507dddfc7c73c",
+      "name": "Product_1",
+      "price": 10,
+      "stock": 50,
+      "image": [
+        "/src/assets/images/productsSmall/product_1.webp",
+        "/src/assets/images/productsMedium/product_1.webp"
+      ],
+      "description": "This is Product 1. It's a great product for your needs.",
+      "category": "Electronics",
+      "brand": "Brand_XYZ",
+      "rating": 4.5,
+      "reviews": [
+        {
+          "id": 1,
+          "userId": 1,
+          "rating": 5,
+          "comment": "Great product! I love it.",
+          "date": "2023-08-01"
+        },
+        {
+          "id": 2,
+          "userId": 2,
+          "rating": 4,
+          "comment": "Good product. Recommended.",
+          "date": "2023-08-02"
+        }
+      ],
+      "filters": [
+        "topsales",
+        "ait premium"
+      ]
+    },
+    {
+      "id": "f91eb86a8f36c973d5e80a7c",
+      "name": "Product_2",
+      "price": 15,
+      "stock": 30,
+      "image": [
+        "/src/assets/images/productsSmall/product_2.webp",
+        "/src/assets/images/productsMedium/product_2.webp"
+      ],
+      "description": "Product 2 is a high-quality product with great features.",
+      "category": "Home & Kitchen",
+      "brand": "Brand_ABC",
+      "rating": 4.0,
+      "reviews": [
+        {
+          "id": 3,
+          "userId": 1,
+          "rating": 4,
+          "comment": "Nice product. Worth the price.",
+          "date": "2023-08-03"
+        }
+      ],
+      "filters": [
+        "topsales",
+        "discounts"
+      ]
+    }
+  ]
+}
+
 ```
 
-## Instructions
+### 👤 Users
 
-Throughout this week you will start creating the dashboard of your e-commerce. We will start this pill with the contents given during the class, and scalate as we get deepen into the information.
+```bash
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "random_user_123",
+      "password": "RandomPassword123!",
+      "email": "random_user_123@example.com",
+      "cart": [],
+      "wishlist": [
+        {
+          "id": "64c9faed738507dddfc7c73c",
+          "name": "Product_1",
+          "price": 10,
+          "stock": 50,
+          "image": [
+            "/src/assets/images/productsSmall/product_1.webp",
+            "/src/assets/images/productsMedium/product_1.webp"
+          ],
+          "description": "This is Product 1. It's a great product for your needs.",
+          "category": "Electronics",
+          "brand": "Brand_XYZ",
+          "rating": 4.5,
+          "reviews": [
+            {
+              "id": 1,
+              "userId": 1,
+              "rating": 5,
+              "comment": "Great product! I love it.",
+              "date": "2023-08-01"
+            },
+            {
+              "id": 2,
+              "userId": 2,
+              "rating": 4,
+              "comment": "Good product. Recommended.",
+              "date": "2023-08-02"
+            }
+          ],
+          "filters": [
+            "topsales",
+            "ait premium"
+          ]
+        },
+        {
+          "id": "f91eb86a8f36c973d5e80a7c",
+          "name": "Product_2",
+          "price": 15,
+          "stock": 30,
+          "image": [
+            "/src/assets/images/productsSmall/product_2.webp",
+            "/src/assets/images/productsMedium/product_2.webp"
+          ],
+          "description": "Product 2 is a high-quality product with great features.",
+          "category": "Home & Kitchen",
+          "brand": "Brand_ABC",
+          "rating": 4.0,
+          "reviews": [
+            {
+              "id": 3,
+              "userId": 1,
+              "rating": 4,
+              "comment": "Nice product. Worth the price.",
+              "date": "2023-08-03"
+            }
+          ],
+          "filters": [
+            "topsales",
+            "organic"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "john_doe",
+      "password": "JohnDoe123!",
+      "email": "john@example.com",
+      "cart": [
+        {
+          "id": "64c9faed738507dddfc7c73c",
+          "name": "Product_1",
+          "price": 10,
+          "stock": 50,
+          "image": [
+            "/src/assets/images/productsSmall/product_1.webp",
+            "/src/assets/images/productsMedium/product_1.webp"
+          ],
+          "description": "This is Product 1. It's a great product for your needs.",
+          "category": "Electronics",
+          "brand": "Brand_XYZ",
+          "rating": 4.5,
+          "reviews": [
+            {
+              "id": 1,
+              "userId": 1,
+              "rating": 5,
+              "comment": "Great product! I love it.",
+              "date": "2023-08-01"
+            },
+            {
+              "id": 2,
+              "userId": 2,
+              "rating": 4,
+              "comment": "Good product. Recommended.",
+              "date": "2023-08-02"
+            }
+          ],
+          "filters": [
+            "topsales",
+            "ait premium"
+          ],
+          "quantity": 2
+        }
+      ],
+      "wishlist": [
+        {
+          "id": "f91eb86a8f36c973d5e80a7c",
+          "name": "Product_2",
+          "price": 15,
+          "stock": 30,
+          "image": [
+            "/src/assets/images/productsSmall/product_2.webp",
+            "/src/assets/images/productsMedium/product_2.webp"
+          ],
+          "description": "Product 2 is a high-quality product with great features.",
+          "category": "Home & Kitchen",
+          "brand": "Brand_ABC",
+          "rating": 4.0,
+          "reviews": [
+            {
+              "id": 3,
+              "userId": 1,
+              "rating": 4,
+              "comment": "Nice product. Worth the price.",
+              "date": "2023-08-03"
+            }
+          ],
+          "filters": [
+            "topsales",
+            "organic"
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
 
-The `main` branch of the future repos will have the favourite class solution of the previous pill so that you can get started with it, should you get stucked at any stage.
+- The "users" array contains information about different users registered on the e-commerce platform.
+- Each user has an "id," "name," "password," and "email."
+- Users have a "cart" array containing products added to their shopping cart with a "quantity" field, and a "wishlist" array containing products they wish to purchase later.
+- The product information in "cart" and "wishlist" is similar to the "products" array but only includes the relevant product details for each user.
 
-### Instructions
+### 🚀 Phase 0: Figma and Clickup
 
-<img src='https://github.com/assembler-institute/react-basics-hooks-shopping-cart/blob/main/src/img/repo/react-basics-classes-initial.png?raw=true' width='600'>
+In Phase 0, we will use two essential tools: Figma and Clickup.
 
-Once you have installed the dependencies of the pill you will need to start using components in a way that is as reusable and modularized as possible.
+- Figma: A powerful design tool that will help you improve the web design and architecture of your e-commerce platform. With Figma, you can visualize the user interface and plan for reusable components.
+- Clickup: A project management tool that will aid you in organizing your tasks efficiently. You can track progress, manage tasks, and collaborate effectively with your team.
 
-Each UI element should be a React component, for example, buttons are UI elements that are reused in multiple places in the app so they should be extracted to React components.
+🚨 Requirements:
 
-### App features
+Familiarity with web design concepts and user interface (UI) design.
+Basic knowledge of project management and task organization.
 
-Once you have modularized the app in components you will have to implement to logic so that you can create an ecommerce app.
+### ⚙ Phase 1: Prop-drilling, useState, useEffect, Conditionals, and Error Handling
 
-#### Rendering the products
+In Phase 1, we will dive into the fundamentals of React development.
 
-The products are stored in the `products.ts` file which you should use to render the products to the screen dynamically using a JavaScript loop `map`.
+- Prop-drilling: Learn how to pass data from one component to another using props.
+- useState: Understand how to manage state in functional components using the useState hook.
+- useEffect: Learn how to perform side effects, such as data fetching and subscriptions, with the useEffect hook.
+- Conditionals: Implement conditional rendering to display different UI components based on certain conditions.
+- Error Handling: Learn error handling techniques to gracefully manage and display errors in your app.
+
+- You should check if the cart item has already been added to the cart to only update the quantity instead of adding it again. You should stablish a quantity limit for each product that could depend upon the stock you stablish on your `products.js` data.
+- Store the items in local storage and load them if the page is reloaded so that the cart items are not lost of page refresh
+- Each time the page is refreshed you should load the cart items from local storage to save them in the React state so that the app renders with the contents from local storage if there are any of them. Otherwise, the cart should display the default message of “Your cart is empty”
 
 As we go along the first lessons, each product should have the event listeners and methods needed to handle the UI interactions needed such as adding the product to the cart.
 
 #### Add to cart
-
-<img src='https://github.com/assembler-institute/react-basics-hooks-shopping-cart/raw/main/src/img/repo/react-basics-classes-add-to-cart.png' width='600'>
 
 During the first stage, you will be required to have a counter for the quantity of products you would like to have directly on each product. Clicking the `Add to Cart` button should add the product that was clicked to the shopping cart.
 
@@ -69,103 +316,154 @@ The items in the cart should be able to render in the shopping cart when the `Ad
 
 #### Shopping cart
 
-<img src='https://github.com/assembler-institute/react-basics-hooks-shopping-cart/raw/main/src/img/repo/react-basics-classes-add-to-cart.png' width='600'>
-
 Once a product has been added to the cart you should be able to:
 
 - Edit the product quantity using the select element which will update the cart’s total price
 - Remove items from the cart which will update the cart’s total price
 - The cart total price should always be updated so that it represents the total cost of all the items in the cart
 - When the cart is empty you should conditionally render a message inside the cart saying that the cart is empty. Then, when the cart has had items added, you should instead render the cart items and remove the default message.
-- Further elements to be added to the project will be given to you as we move on.
 
 ### State management
 
 You should use React to handle the state management in the app. You cannot use a state management library.
 
-## Extra steps 💯
+⚛️ By the end of Phase 1, you will be able to create a basic home page and a side checkout component. Additionally, you will use useEffect to work with local storage or cookies to manage data efficiently.
 
-Once you have finished the initial part of the pill you should implement the following steps to improve your skills:
+🚨 Requirements:
 
-<img src='https://github.com/assembler-institute/react-basics-hooks-shopping-cart/raw/main/src/img/repo/react-basics-classes-add-to-cart.png' width='600'>
+Basic understanding of JavaScript and React concepts.
 
-- You should check if the cart item has already been added to the cart to only update the quantity instead of adding it again. You should stablish a quantity limit for each product that could depend upon the stock you stablish on your `products.ts` data.
-- Store the items in local storage and load them if the page is reloaded so that the cart items are not lost on page refresh
-- Each time the page is refreshed you should load the cart items from local storage to save them in the React state so that the app renders with the contents from local storage if there are any of them. Otherwise, the cart should display the default message of “Your cart is empty”
+### 📚 Phase 2: React Router, useContext, useReducer, Inputs, and Forms
 
-## Technical Requirements
+In Phase 2, we will level up our React skills by introducing more advanced concepts.
 
-### Next we leave you a series of technical requirements that will be evaluated:
+- React Router: Learn how to implement client-side routing and navigation using React Router. This will enable you to create different pages and handle user interactions effectively.
+- useContext: Understand how to use the useContext hook to share state across components without prop drilling.
+- useReducer: Learn how to manage complex state logic using the useReducer hook.
+- Inputs and Forms: Implement forms and handle user input to create functionalities such as login, register, and logout pages.
 
-- **Figma**: Or a similar platform, where you plan ahead of starting to code the look and feel of your application. As a frontender it is important that you visualize what you need ahead of time. It will ease the next steps when building your web application.
+⚛️ By the end of Phase 2, you will be able to implement a login, register page and logout functionality. You will also implement a checkout cart feature in your e-commerce platform.
 
--  **useState**: Utilize the `useState` hook to manage component state and store data such as the shopping cart, user information, etc.
-    
--  **useEffect**: Employ the `useEffect` hook to perform asynchronous operations, such as fetching data from an API, managing side effects, and updating the application state.
-    
--  **useContext**: Use the `useContext` hook to access globally shared data between components without the need to manually pass properties. This can include user information, global configuration, etc.
-    
--  **Routes**: Implement routing using library like `react-router-dom` . Define the necessary routes for different sections of the application, such as the home page, product page, shopping cart, etc.
+🚨 Requirements:
 
--  **Protected Routes**: Implement protected routes to restrict access to certain pages or features that require authentication. For example, only allow authenticated users to access the user profile or the checkout process. Redirect unauthorized users to a login page.
-    
--  **.map**: Use the `map` method to iterate over data lists, such as the product list, and dynamically render elements.
-    
-- **Architecture (folder structure)**: Organize your project following a coherent and scalable folder structure. For example:
-    -   `/src`
-        -   `/components`: Contains reusable components used in various parts of the application.
-        -   `/pages`: Contains page-specific components for each page of the application.
-        -   `/services`: Contains modules for interacting with external APIs or other services.
-        -   `/utils`: Contains utilities and helper functions.
-        -   `/styles`: Contains global style files or custom themes.
-        
--  **Reusable components**: Create reusable components that can be used in different parts of the application. This promotes consistency and facilitates project maintenance and scalability.
-    
--  **Static typing and use of interfaces and custom types**: Take advantage of TypeScript to add static typing to your application. Define interfaces and custom types to improve code readability, prevent errors, and enhance maintainability.
+Familiarity with basic React concepts covered in Phase 1.
 
-### Summary
+### 🔄 Phase 3: Async/Await, React Router with dynamic and private Routes, and searchParams
 
-- You should extract and modularize all the UI elements to React components
-- The products must be rendered dynamically using JavaScript loops
-- The products should be rendered as React components
-- You cannot use external state management libraries
-- All the components that require state should be created using React
-- Use interfaces or custom types to define the data structures and properties of the components.
-- Use `functional components` and `setState` methods to update the state of the application
-- Take advantage of TypeScript to detect errors and improve code quality during development.
+In Phase 3, we will further enhance our e-commerce platform by introducing asynchronous programming.
 
+- Async/Await: Learn how to work with asynchronous code using Async/Await. This will allow you to make API requests and handle data asynchronously.
+- React Router with dynamic and private Routes: Implement dynamic and private routes to handle different user interactions and protect sensitive pages that require authentication.
+- searchParams: Use searchParams to interact with URL query parameters and create detailed product pages.
 
-## [EXTRA] Technical Requirements
+⚛️ By the end of Phase 3, you will have a fully functional e-commerce platform with dynamic and private routes and detailed product pages.
 
-- **Responsiveness**: Check whether the website is responsive and works well across different devices and screen sizes.
--  **useReducer**: Utilize the `useReducer` hook to manage more complex states where actions and updates need to be performed. This can be useful for managing the shopping cart, authentication state, etc.
-- **`.env` File**: Create a `.env` file to securely store sensitive information such as API keys, payment gateway configurations, and other environment-specific settings. This ensures that confidential data is not exposed in the source code.
-- **Lazy Loading**: React Lazy and Suspense are built-in React features that allow you to lazily load components, improving the initial page load performance. By splitting your code into smaller chunks and loading them on-demand, you can provide faster load times for users and potentially improve SEO rankings.
-- **React Helmet**: Allows you to dynamically update the document head of your React components. It helps you add important metadata such as title tags, meta descriptions, and canonical URLs to improve SEO and provide better control over how your pages appear in search engine results.
-- **User Experience (UX)**: Evaluate the overall user experience by considering the website's layout, navigation, and design. Ensure that the interface is intuitive, user-friendly, and visually appealing. Focus on elements such as clear calls-to-action, easy-to-find product information, and smooth transitions between elements.
-- **Performance**: Assess the performance of the website, paying attention to factors such as page load times, server response times, and overall responsiveness. Slow-loading pages can negatively impact user experience and lead to higher bounce rates.
-- **Accessibility**: Ensure that the website meets accessibility standards to cater to users with disabilities. Pay attention to factors like proper semantic markup, keyboard navigation support, alternative text for images, and sufficient color contrast.
-- **Error Handling**: Assess how well errors and exceptions are handled throughout the website. Verify that appropriate error messages are displayed when something goes wrong, and ensure that the website gracefully handles unexpected scenarios.
-- **Documentation**: Review the documentation provided to start the project, including code comments, API documentation (if applicable), and any technical or design specifications. Well-documented projects are easier to understand and maintain in the long run.
+🚨 Requirements:
 
-## Available Scripts
+Familiarity with asynchronous programming concepts and handling API requests.
 
-In the project directory, you can run:
+### 🎨 Phase 4: CSS Modules and Styled Components
 
-### `yarn start`  `npm start`
+In Phase 4, we will focus on improving the styling of our e-commerce platform.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- CSS Modules: Learn how to use CSS Modules to encapsulate styles and avoid class name collisions. This will improve the maintainability of your CSS code.
+- Styled Components: Explore Styled Components, a library that allows you to write CSS directly within your JavaScript code. This will enable better organization and reusability of styles.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+⚛️ By the end of Phase 4, your e-commerce platform will have a polished and well-structured user interface.
 
-## Support Resources
+🚨 Requirements:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Familiarity with React components and their styling.
+
+### 🧠 Extra Phase 5: Memoization Techniques
+
+In this optional Extra Phase, we will explore memoization techniques.
+
+- Memoization: Learn how to optimize performance by caching the results of expensive function calls. Memoization can significantly improve the speed of your app, especially when dealing with large datasets or complex computations.
+
+🚨 Requirements:
+
+Solid understanding of JavaScript and React concepts.
+
+### 🛌 Extra Phase 6: Custom Hooks, Lazy Loading, and startTransition
+
+In this optional Extra Phase, we will dive into custom hooks, lazy loading, and startTransition.
+
+- Custom Hooks: Learn how to create custom hooks to encapsulate and share logic across components. Custom hooks make your code more modular and reusable.
+- Lazy Loading: Implement lazy loading to load non-critical resources only when they are needed. This can significantly improve the speed and performance of your app.
+- startTransition: Use startTransition to improve the user experience during state transitions, making the app feel more responsive and smooth.
+
+🚨 Requirements:
+
+Advanced understanding of React hooks and their use cases.
+
+### 🛍️ Extra Phase 7: Add-ons
+
+In this optional Extra Phase, we will add more advanced features to our e-commerce platform.
+
+- Wishlist with useReducer: Implement a wishlist feature using the useReducer hook to manage wishlist items.
+- .env: Use environment variables to handle sensitive data or configuration settings securely.
+- React Helmet for SEO: Improve search engine optimization by using React Helmet to manage meta tags and page titles.
+- Admin Login: Implement an admin login functionality to secure administrative actions.
+- Cross-selling: Introduce cross-selling techniques to recommend related products to users.
+- Shipping/Product Discounts at Checkout: Apply shipping or product discounts at checkout to enhance the user experience.
+- Discounts for New Users: Offer special discounts to new users to encourage sign-ups.
+- Shopping History: Implement a shopping history feature for users to track their past purchases.
+- Promotions: Introduce promotional offers or coupon codes to attract customers.
+
+🚨 Requirements:
+
+Proficiency in React and state management concepts.
+
+## 👩‍🎓👨‍🎓 Evaluation
+
+The final evaluation for the e-commerce platform project will be based on the completion of different phases. Phase 1, 2, and 3 will account for 65% of the total evaluation, while Phase 4, 5, and 6 will contribute to the remaining 35%. Additionally, there is an extra 25% that can be earned based on how many aspects of Phase 7 the student successfully meets. This grading system aims to encourage students to focus on mastering the foundational concepts in the earlier phases while providing opportunities to earn additional credit by tackling more advanced features in the optional Phase 7.
+
+## 📝 Learn More
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-## License
+## 👾 Installation Tips
+
+1. Create your own GitHub repository and create your own folder:
+```bash
+$ mkdir ait-ecommerce-vite-project
+$ cd ait-ecommerce-vite-project
+$ git clone https://yourgithubprojectrepository.com
+```
+Install the dependencies:
+
+If you are using npm, run:
+```bash
+$ npm create vite@latest
+```
+#### If you are using pnpm, which we highly recommend, run:
+```bash
+$ pnpm create vite
+```
+If you are using yarn, run:
+```bash
+$ yarn create vite
+```
+
+#### Start the development server:
+
+If you are using npm, run:
+```bash
+$ npm run dev
+```
+
+If you are using pnpm, run:
+```bash
+$ pnpm dev
+```
+If you are using yarn, run:
+```bash
+$ yarn dev
+```
+
+The app will be available at http://localhost:3000/
+
+## 📃 License
 
 Licensed under the [MIT License](./LICENSE).
