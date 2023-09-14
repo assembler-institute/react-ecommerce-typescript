@@ -14,7 +14,7 @@ Bear in mind, that **The UI/UX will be highly valued, and the project will be sa
 
 Let's create a seamless shopping experience together! Happy coding!
 
-![ByteMarket AIT](https://i.ibb.co/RBCNBRK/bytemarket.png)
+![ByteMarket AIT](https://res.cloudinary.com/dtvp3u4ql/image/upload/f_auto,q_auto/hjp1smphal2hawfvk8mc)
 
 ## Table of Contents <!-- omit in toc -->
 
