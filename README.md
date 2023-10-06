@@ -24,7 +24,7 @@ Let's create a seamless shopping experience together! Happy coding!
     - [👤 Users](#-users)
 - [🚀 Phase 0: Figma and Clickup](#-phase-0-figma-and-clickup)
 - [⚙ Phase 1: Prop-drilling, useState, useEffect, Conditionals, and Error Handling](#-phase-1-prop-drilling-usestate-useeffect-conditionals-and-error-handling)
-- [📚 Phase 2: React Router, useContext, useReducer, Inputs, and Forms](#-phase-2-react-router-usecontext-usereducer-inputs-and-forms)
+- [📚 Phase 2: React Router, useContext, Inputs, and Forms](#-phase-2-react-router-usecontext-inputs-and-forms)
 - [🔄 Phase 3: Async/Await, React Router with dynamic and private Routes, and searchParams](#-phase-3-asyncawait-react-router-with-dynamic-and-private-routes-and-searchparams)
 - [🎨 Phase 4: CSS Modules and Styled Components](#-phase-4-css-modules-and-styled-components)
 - [🧠 Extra Phase 5: Memoization Techniques](#-extra-phase-5-memoization-techniques)
@@ -333,13 +333,12 @@ You should use React to handle the state management in the app. You cannot use a
 
 Basic understanding of JavaScript and React concepts.
 
-### 📚 Phase 2: React Router, useContext, useReducer, Inputs, and Forms
+### 📚 Phase 2: React Router, useContext, Inputs, and Forms
 
 In Phase 2, we will level up our React skills by introducing more advanced concepts.
 
 - React Router: Learn how to implement client-side routing and navigation using React Router. This will enable you to create different pages and handle user interactions effectively.
 - useContext: Understand how to use the useContext hook to share state across components without prop drilling.
-- useReducer: Learn how to manage complex state logic using the useReducer hook.
 - Inputs and Forms: Implement forms and handle user input to create functionalities such as login, register, and logout pages.
 
 ⚛️ By the end of Phase 2, you will be able to implement a login, register page and logout functionality. You will also implement a checkout cart feature in your e-commerce platform.
@@ -348,34 +347,22 @@ In Phase 2, we will level up our React skills by introducing more advanced conce
 
 Familiarity with basic React concepts covered in Phase 1.
 
-### 🔄 Phase 3: Async/Await, React Router with dynamic and private Routes, and searchParams
+### 🔄 Phase 3: useReducer, Async/Await, React Router with dynamic and private Routes, and searchParams
 
 In Phase 3, we will further enhance our e-commerce platform by introducing asynchronous programming.
 
+- useReducer: Learn how to manage complex state logic using the useReducer hook.
 - Async/Await: Learn how to work with asynchronous code using Async/Await. This will allow you to make API requests and handle data asynchronously.
 - React Router with dynamic and private Routes: Implement dynamic and private routes to handle different user interactions and protect sensitive pages that require authentication.
 - searchParams: Use searchParams to interact with URL query parameters and create detailed product pages.
 
-⚛️ By the end of Phase 3, you will have a fully functional e-commerce platform with dynamic and private routes and detailed product pages.
+⚛️ By the end of Phase 3, you will have a fully functional e-commerce platform with complex state management, dynamic and private routes and detailed product pages.
 
 🚨 Requirements:
 
-Familiarity with asynchronous programming concepts and handling API requests.
+Familiarity with complex state management, asynchronous programming concepts and handling API requests.
 
-### 🎨 Phase 4: CSS Modules and Styled Components
-
-In Phase 4, we will focus on improving the styling of our e-commerce platform.
-
-- CSS Modules: Learn how to use CSS Modules to encapsulate styles and avoid class name collisions. This will improve the maintainability of your CSS code.
-- Styled Components: Explore Styled Components, a library that allows you to write CSS directly within your JavaScript code. This will enable better organization and reusability of styles.
-
-⚛️ By the end of Phase 4, your e-commerce platform will have a polished and well-structured user interface.
-
-🚨 Requirements:
-
-Familiarity with React components and their styling.
-
-### 🧠 Extra Phase 5: Memoization Techniques
+### 🧠 Extra Phase 4: Memoization Techniques
 
 In this optional Extra Phase, we will explore memoization techniques.
 
@@ -385,7 +372,7 @@ In this optional Extra Phase, we will explore memoization techniques.
 
 Solid understanding of JavaScript and React concepts.
 
-### 🛌 Extra Phase 6: Custom Hooks, Lazy Loading, and startTransition
+### 🛌 Extra Phase 5: Custom Hooks, Lazy Loading, and startTransition
 
 In this optional Extra Phase, we will dive into custom hooks, lazy loading, and startTransition.
 
@@ -396,6 +383,19 @@ In this optional Extra Phase, we will dive into custom hooks, lazy loading, and 
 🚨 Requirements:
 
 Advanced understanding of React hooks and their use cases.
+
+### 🎨 Extra Phase 6: CSS Modules and Styled Components
+
+In Phase 6, we will focus on improving the styling of our e-commerce platform.
+
+- CSS Modules: Learn how to use CSS Modules to encapsulate styles and avoid class name collisions. This will improve the maintainability of your CSS code.
+- Styled Components: Explore Styled Components, a library that allows you to write CSS directly within your JavaScript code. This will enable better organization and reusability of styles.
+
+⚛️ By the end of Phase 6, your e-commerce platform will have a polished and well-structured user interface.
+
+🚨 Requirements:
+
+Familiarity with React components and their styling.
 
 ### 🛍️ Extra Phase 7: Add-ons
 
@@ -417,7 +417,10 @@ Proficiency in React and state management concepts.
 
 ## 👩‍🎓👨‍🎓 Evaluation
 
-The final evaluation for the e-commerce platform project will be based on the completion of different phases. Phase 1, 2, and 3 will account for 65% of the total evaluation, while Phase 4, 5, and 6 will contribute to the remaining 35%. Additionally, there is an extra 25% that can be earned based on how many aspects of Phase 7 the student successfully meets. This grading system aims to encourage students to focus on mastering the foundational concepts in the earlier phases while providing opportunities to earn additional credit by tackling more advanced features in the optional Phase 7.
+The final evaluation for the e-commerce platform project will be based on the completion of different phases:
+- Phase 0, 1, and 2 will account for 75% of the total evaluation.
+- Phase 3 will account for the remaining 25% of the total evaluation.
+- Phases 4, 5, 6 and 7 will contribute towards extra points. There is an extra 25% that can be earned based on how many aspects of these phases the student successfully meets. This grading system aims to encourage students to focus on mastering the foundational concepts in the earlier phases while providing opportunities to earn additional credit by tackling more advanced features in the optional Phase 7.
 
 ## 📝 Learn More
 
