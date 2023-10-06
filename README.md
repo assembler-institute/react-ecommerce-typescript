@@ -421,7 +421,7 @@ Proficiency in React and state management concepts.
 The final evaluation for the e-commerce platform project will be based on the completion of different phases:
 - Phase 0, 1, and 2 will account for 75% of the total evaluation.
 - Phase 3 will account for the remaining 25% of the total evaluation.
-- Phases 4, 5, 6 and 7 will contribute towards extra points. There is an extra 25% that can be earned based on how many aspects of these phases the student successfully meets. This grading system aims to encourage students to focus on mastering the foundational concepts in the earlier phases while providing opportunities to earn additional credit by tackling more advanced features in the optional Phase 7.
+- Phases 4, 5, 6 and 7 will contribute towards extra points. There is an extra 25% that can be earned based on how many aspects of these phases the student successfully meets. This grading system aims to encourage students to focus on mastering the foundational concepts in the earlier phases while providing opportunities to earn additional credit by tackling more advanced features in the optional phases.
 
 ## 📝 Learn More
 
