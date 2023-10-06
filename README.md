@@ -372,13 +372,14 @@ In this optional Extra Phase, we will explore memoization techniques.
 
 Solid understanding of JavaScript and React concepts.
 
-### 🛌 Extra Phase 5: Custom Hooks, Lazy Loading, and startTransition
+### 🛌 Extra Phase 5: Custom Hooks, Lazy Loading, startTransition, and React Hook Form
 
-In this optional Extra Phase, we will dive into custom hooks, lazy loading, and startTransition.
+In this optional Extra Phase, we will dive into custom hooks, lazy loading, startTransition, and react hook form.
 
 - Custom Hooks: Learn how to create custom hooks to encapsulate and share logic across components. Custom hooks make your code more modular and reusable.
 - Lazy Loading: Implement lazy loading to load non-critical resources only when they are needed. This can significantly improve the speed and performance of your app.
 - startTransition: Use startTransition to improve the user experience during state transitions, making the app feel more responsive and smooth.
+- React Hook Form: Moving away from uncontrolled to controlled forms. 
 
 🚨 Requirements:
 
